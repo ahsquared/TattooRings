@@ -79,6 +79,25 @@ textarea {
 .ring {
 	background: #000;
 }
+#btn-container {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 200px;
+    padding: 5px;
+}
+.btn {
+    background: #fdfdfd;
+    color: #6695D1;
+    cursor: pointer;
+    display: block;
+    margin: 0 0 5px 0;
+    padding: 3px 10px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    text-align: center;
+}
 
 
 
