@@ -23,13 +23,9 @@ var rings = {
 		this.ringContainer = $('<div id="rings"></div>');
 	},
 	setupButtons: function () {
-		var btn = $('<div class="btn"></div>');
-		var clrRingsBtn = $('<div class="btn clr">Show Colored Rings</div>');
-		clrRingsBtn.appendTo($('#btn-container'));
-		var greyRingsBtn = $('<div class="btn grey">Show Grey Rings</div>');
-		greyRingsBtn.appendTo($('#btn-container'));
 		$('.clr').on('click', rings.showColoredRings);
 		$('.grey').on('click', rings.showGreyRings);
+		$('.pi-primes').on('click', rings.showPiPrimesRings);
 	},
 	generateRings: function (ht, space, op, clr) {
 		var ring = $('<div class="ring"></div>');
@@ -61,5 +57,14 @@ var rings = {
 		}
 		rings.ringContainer.appendTo($('#container'));	
 	},
-
+	showPiPrimesRings: function() {
+		$('#rings').empty();
+		for (var i=0; i < rings.numRings; i++) {
+			var ht = rings.piArray[i] * rings.ringHtMultiplier;
+			var space = Math.max(rings.primesArray[i] * rings.spaceHtMultiplier, 1);
+			var color = rings.colors[rings.piArray[i]];
+			rings.generateRings(ht, space, 1, "#000000");
+		}
+		rings.ringContainer.appendTo($('#container'));	
+	},
 }
