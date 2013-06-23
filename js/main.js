@@ -38,6 +38,10 @@ var rings = {
         $('#colors, #single-color').on('change keyup', function () {
             rings.changeColors();
         });
+        $('#grey-scale').on('change', function () {
+            $('#colors').val("grey");
+            rings.changeColors();
+        });
     },
     generateRings: function (ht, space, op, clr) {
         for (var i = 0; i < rings.numRings; i++) {
@@ -130,8 +134,21 @@ var rings = {
                 });
             }
         } else if (Array.isArray(color) && val === "grey") {
+            var greyScale;
+            var greyVal = $('#grey-scale').val();
+            switch (greyVal) {
+                case "e":
+                    greyScale = this.eArray;
+                    break;
+                case "primes":
+                    greyScale = this.primesArray;
+                    break;
+                case "pi":
+                    greyScale = this.piArray;
+                    break;
+            }
             for (var i = 0; i < this.numRings; i++) {
-                var opacity = (this.piArray[i] * 0.1) + 0.1;
+                var opacity = (greyScale[i] * 0.1) + 0.1;
                 $('.ring').eq(i).css({
                     "backgroundColor": "#000000",
                     "opacity": opacity
