@@ -35,12 +35,27 @@ var rings = {
         $('#spacing, #space-amount, #space-multiplier').on('change keyup', function () {
             rings.changeSpacing();
         });
-        $('#colors, #single-color').on('change keyup', function () {
+        $('#colors').on('change keyup', function () {
             rings.changeColors();
         });
-        $('#grey-scale').on('change', function () {
+        $('#single-color').on('change', function () {
+            $('#colors').val("single");
+            rings.changeColors();
+        });
+        $('#grey-scale').on('change keyup', function () {
             $('#colors').val("grey");
             rings.changeColors();
+        });
+        $('.hide').on('click', function () {
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active').text('Controls: Hide');
+                $('.section').slideDown();
+                $('#btn-container').removeClass('fade');
+            } else {
+                $(this).addClass('active').text('Controls: Show');
+                $('.section').slideUp();
+                $('#btn-container').addClass('fade');
+            }
         });
     },
     generateRings: function (ht, space, op, clr) {
