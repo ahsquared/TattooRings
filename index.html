@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/spectrum.css">
     <link rel="stylesheet" href="css/main.css">
 
     <!--[if lt IE 9]>
@@ -23,9 +24,9 @@
         <div class="section">
             <h2>Height</h2>
             <select id="height">
-                <option value="even">Even (see select below)</option>
+                <option value="same">Same (see select below)</option>
                 <option value="e">Digits of Natural e</option>
-                <option value="primes">Digits Prime Numbers</option>
+                <option value="primes">Digits of Prime Numbers</option>
                 <option value="pi">Digits of Pi</option>
             </select>
             <label>Height</label>
@@ -38,9 +39,9 @@
 
             <h2>Spacing</h2>
             <select id="spacing">
-                <option value="even">Even (see select below)</option>
+                <option value="same">Same (see select below)</option>
                 <option value="e">Digits of Natural e</option>
-                <option value="primes">Digits Prime Numbers</option>
+                <option value="primes">Digits of Prime Numbers</option>
                 <option value="pi">Digits of Pi</option>
             </select>
             <label>Space</label>
@@ -60,10 +61,11 @@
             </select>
             <br />
             <label>Single Color</label>
-            <input id="single-color" type="text" value="#000000" />
+            <input id="single-color" type="color" value="#000000" />
         </div>
     </div>
     <script src="js/vendor/jquery-1.9.1.min.js"></script>
+    <script src="js/vendor/spectrum.js"></script>
 
     <script src="js/main.js"></script>
 </body>

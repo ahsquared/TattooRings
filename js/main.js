@@ -51,7 +51,7 @@ var rings = {
         var ht = parseInt($('#height-amount').val());
         var mult = parseInt($('#height-multiplier').val());
         switch (val) {
-            case "even":
+            case "same":
                 ht = ht;
                 break;
             case "e":
@@ -78,7 +78,7 @@ var rings = {
         var space = parseInt($('#space-amount').val());
         var mult = parseInt($('#space-multiplier').val());
         switch (val) {
-            case "even":
+            case "same":
                 space =  space;
                 break;
             case "e":
