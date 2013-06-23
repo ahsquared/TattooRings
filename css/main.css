@@ -64,6 +64,22 @@ textarea {
 	margin: 0 auto;
 	position: relative; 
 }
+h2 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    font-weight: normal;
+    color: #fff;
+}
+label {
+    color: #fff;
+}
+input[type=text] {
+    width: 40px;
+    margin: 5px;
+}
+#single-color {
+    width: 70px;
+}
 #trees {
 	display: none;
 	background: url("../img/trees.png") no-repeat top left;
@@ -83,10 +99,15 @@ textarea {
     position: fixed;
     top: 5px;
     left: 5px;
-    background: rgba(0, 0, 0, 0.5);
-    width: 200px;
-    padding: 5px;
+    width: 220px;
 }
+    #btn-container .section {
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
+        margin-bottom: 10px;
+        padding: 10px 5px;
+    }
+
 .btn {
     background: #fdfdfd;
     color: #6695D1;
