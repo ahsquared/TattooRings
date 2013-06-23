@@ -29,13 +29,13 @@ var rings = {
         this.changeColors();
     },
     setupControls: function () {
-        $('#height, #height-amount, #height-multiplier').on('change', function () {
+        $('#height, #height-amount, #height-multiplier').on('change keyup', function () {
             rings.changeHeight();
         });
-        $('#spacing, #space-amount, #space-multiplier').on('change', function () {
+        $('#spacing, #space-amount, #space-multiplier').on('change keyup', function () {
             rings.changeSpacing();
         });
-        $('#colors, #single-color').on('change', function () {
+        $('#colors, #single-color').on('change keyup', function () {
             rings.changeColors();
         });
     },
